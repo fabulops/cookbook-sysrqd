@@ -18,7 +18,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-Chef::Log.debug("sysreqd:: Running on Ubuntu 10.04")
+Chef::Log.debug("sysrqd: Running on Ubuntu 10.04")
 
 package "sysrqd"
 

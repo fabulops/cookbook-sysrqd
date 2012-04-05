@@ -19,9 +19,14 @@ platforms may be added if time and resources permit.
 Recipes
 -------
 
-*sysrqd::default*
+*sysrqd::default* - Decide if we are running on a supported system and,
+if so, run the correct driver recipe
 
-The default recipe installs and configures sysrqd.
+The following *driver* recipes are currently supported:
+
+*sysrqd::ubuntu_10.04* - Installs and configures _sysrqd_ for Ubuntu
+10.04 LTS systems
+
 
 Attributes
 ----------
@@ -29,7 +34,17 @@ Attributes
 *[:sysrqd][:password]* - The password to use when authenticating to a
 node running sysrqd. *NOTE* the password is sent in cleartext so should
 be changed after use. There are better ways to secure this exchange and
-they are left as an exercise to the reader.
+they are left as an exercise to the reader
+
+*[:sysrqd][:port]* - The port is stored on the node for informational
+purposes only (i.e. remembering which one it is on in the middle of the
+night when you actually need to use sysrqd)
+
+# The default sequence is listed for reference
+*[:sysrqd][:commands]* - A list of standard commands keys used once
+authenticated to sysrqd. This is stored for the same informational
+purposes as *[:sysrqd][:port]
+
 
 LICENSE AND AUTHOR
 ==================
