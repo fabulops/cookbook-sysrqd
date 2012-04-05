@@ -25,5 +25,5 @@ case platform
 when "ubuntu-10.04"
   include_recipe "sysrqd::ubuntu_10.04"
 else
-  Chef::Log.debug("sysrqd:: Unsupported Platform")
+  Chef::Log.debug("sysrqd: Unsupported Platform")
 end
