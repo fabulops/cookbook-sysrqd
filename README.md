@@ -40,7 +40,6 @@ they are left as an exercise to the reader
 purposes only (i.e. remembering which one it is on in the middle of the
 night when you actually need to use sysrqd)
 
-# The default sequence is listed for reference
 *[:sysrqd][:commands]* - A list of standard commands keys used once
 authenticated to sysrqd. This is stored for the same informational
 purposes as *[:sysrqd][:port]
