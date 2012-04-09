@@ -34,7 +34,8 @@ Attributes
 *[:sysrqd][:password]* - The password to use when authenticating to a
 node running sysrqd. *NOTE* the password is sent in cleartext so should
 be changed after use. There are better ways to secure this exchange and
-they are left as an exercise to the reader
+they are left as an exercise to the reader (i.e., encrypted data bags,
+noah, zookeeper, etc.)
 
 *[:sysrqd][:port]* - The port is stored on the node for informational
 purposes only (i.e. remembering which one it is on in the middle of the
