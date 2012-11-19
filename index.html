@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Cookbook-sysrqd by fabulops</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Cookbook-sysrqd</h1>
+        <p>Opscode Chef cookbook for deploying and configuring sysrqd</p>
+
+        <p class="view"><a href="https://github.com/fabulops/cookbook-sysrqd">View the Project on GitHub <small>fabulops/cookbook-sysrqd</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/fabulops/cookbook-sysrqd/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/fabulops/cookbook-sysrqd/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/fabulops/cookbook-sysrqd">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>DESCRIPTION</h1>
+
+<p>This cookbook installs and configures sysrqd, a minimal daemon that
+allows for remote control of a running kernel, primarily for the purpose
+of rebooting a hung system.</p>
+
+<h2>Requirements</h2>
+
+<p>This cookbook is being developed against Chef 0.10.x</p>
+
+<h2>Platforms</h2>
+
+<p>This cookbook is being developed against Ubuntu 10.04 LTS. Other
+platforms may be added if time and resources permit.</p>
+
+<h2>Recipes</h2>
+
+<p><em>sysrqd::default</em> - Decide if we are running on a supported system and,
+if so, run the correct driver recipe</p>
+
+<p>The following <em>driver</em> recipes are currently supported:</p>
+
+<p><em>sysrqd::ubuntu_10.04</em> - Installs and configures <em>sysrqd</em> for Ubuntu
+10.04 LTS systems</p>
+
+<h2>Attributes</h2>
+
+<p><em>[:sysrqd][:password]</em> - The password to use when authenticating to a
+node running sysrqd. <em>NOTE</em> the password is sent in cleartext so should
+be changed after use. There are better ways to secure this exchange and
+they are left as an exercise to the reader (i.e., encrypted data bags,
+noah, zookeeper, etc.)</p>
+
+<p><em>[:sysrqd][:port]</em> - The port is stored on the node for informational
+purposes only (i.e. remembering which one it is on in the middle of the
+night when you actually need to use sysrqd)</p>
+
+<p><em>[:sysrqd][:commands]</em> - A list of standard commands keys used once
+authenticated to sysrqd. This is stored for the same informational
+purposes as *[:sysrqd][:port]</p>
+
+<h1>LICENSE AND AUTHOR</h1>
+
+<p>Author:: Adam Garside (<a href="mailto:adam.garside@gmail.com">adam.garside@gmail.com</a>)</p>
+
+<p>Copyright 2009-2012, Adam Garside</p>
+
+<p>Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in sysrqd with the License.
+You may obtain a copy of the License at</p>
+
+<pre><code>http://www.apache.org/licenses/LICENSE-2.0
+</code></pre>
+
+<p>Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.</p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/fabulops">fabulops</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
